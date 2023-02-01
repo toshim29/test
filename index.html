@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- Below Line imports the required css for the widget -->
+        <link rel="stylesheet" type="text/css" href="https://abc0123-tosh.my.localdev.idaptive.app/vfslow/lib/uibuild/factor-enrollment-widget/static/css/factor-enrollment-widget.css">
+        <!-- Below Line imports the required javascript for the widget -->
+        <script src="https://abc0123-tosh.my.localdev.idaptive.app/vfslow/lib/uibuild/factor-enrollment-widget/static/js/factor-enrollment-widget.js"></script>
+        <script type="text/javascript">
+           /* 
+               launchFactorEnrollmentWidget method is used to render the widget with provided configuration.
+               Inject the factor enrollment widget by providing a containerSelector (a querySelector path) for the container on your page where you'd like it to display.
+               This can be any empty div on the page, or the body itself.
+               The widgetId should be send to "widgetId" configuration so that widget renders with configuration saved in the admin portal.
+                https://identity-developer.cyberark.com/docs/authentication-widgets
+           */
+           var widgetHandler = {};
+            document.addEventListener('DOMContentLoaded', function () {
+                launchFactorEnrollmentWidget({"containerSelector":".cyberark-fe","apiFqdn":"abc0123-tosh.my.localdev.idaptive.app","widgetId":"3160600c-c31d-4ab2-b907-71164632ed01","styleOptions":{}});
+            });
+           widgetHandler.onBackClick = function () {
+/* 
+ This method should dictate where the user should be navigated to, on a click of the back button, and is invoked when the user clicks on the back button on the factor enrollment widget. 
+*/
+};
+        </script>
+    </head>
+    <body class="cyberark-fe" style="">
+    </body>
+</html>
